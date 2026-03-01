@@ -4,78 +4,136 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CAIC | AI & ML Engineer Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <!-- Futuristic Grid Overlay -->
+  <div class="cyber-grid"></div>
+
   <header>
-    <img src="caic_logo.png" alt="CAIC Logo" />
+    <div class="logo-container">
+      <img src="caic_logo.png" alt="CAIC Logo" class="cyber-logo" />
+    </div>
     <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#about"><span class="nav-tag">&lt;</span>About<span class="nav-tag">/&gt;</span></a>
+      <a href="#skills"><span class="nav-tag">&lt;</span>Skills<span class="nav-tag">/&gt;</span></a>
+      <a href="#projects"><span class="nav-tag">&lt;</span>Projects<span class="nav-tag">/&gt;</span></a>
+      <a href="#contact"><span class="nav-tag">&lt;</span>Contact<span class="nav-tag">/&gt;</span></a>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>CAIC</h1>
-    <p><strong>Comma and Inverted Comma</strong><br>AI & ML Engineer | Building Intelligent Systems</p>
-    <button class="cta" onclick="window.location.href='mailto:sameerrsingh2791@gmail.com'">Get In Touch</button>
+    <div class="hero-content">
+      <h1 class="glitch" data-text="CAIC">CAIC</h1>
+      <p class="subtitle">
+        <span class="highlight-saffron">[</span>Comma and Inverted Comma<span class="highlight-saffron">]</span>
+      </p>
+      <p class="role-text">
+        <span class="typewriter">AI & ML Engineer</span> <span class="cursor">|</span> Building Intelligent Systems
+      </p>
+      <button class="cta cyber-button" onclick="window.location.href='mailto:youremail@example.com'">
+        INITIATE_CONTACT()
+      </button>
+    </div>
   </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m an AI and Machine Learning Engineer specializing in creating intelligent systems that bridge innovation and efficiency. I work across multiple domains integrating ML models, automation, and scalable deployment solutions.</p>
+  <section id="about" class="cyber-section">
+    <div class="section-header">
+      <h2><span class="header-brackets">[</span> About Me <span class="header-brackets">]</span></h2>
+      <div class="cyber-line"></div>
+    </div>
+    <div class="glass-panel">
+      <p>I’m an AI and Machine Learning Engineer specializing in creating intelligent systems that bridge innovation and efficiency. I work across multiple domains integrating <span class="highlight-green">ML models</span>, <span class="highlight-saffron">automation</span>, and scalable deployment solutions.</p>
+    </div>
   </section>
 
-  <section id="skills">
-    <h2>Technical Skills</h2>
+  <section id="skills" class="cyber-section">
+    <div class="section-header">
+      <h2><span class="header-brackets">[</span> Technical Skills <span class="header-brackets">]</span></h2>
+      <div class="cyber-line"></div>
+    </div>
     <div class="grid-container">
-      <div class="card">
-        <h3>Core ML</h3>
-        <p>Python, TensorFlow, PyTorch</p>
+      <div class="cyber-card">
+        <div class="card-glow"></div>
+        <div class="card-content">
+          <h3><span class="icon">SYS.</span>Core ML</h3>
+          <p class="tech-stack">> Python, TensorFlow, PyTorch</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>Data Science</h3>
-        <p>Pandas, Scikit-learn, Visualization</p>
+      <div class="cyber-card">
+        <div class="card-glow"></div>
+        <div class="card-content">
+          <h3><span class="icon">DAT.</span>Data Science</h3>
+          <p class="tech-stack">> Pandas, Scikit-learn, Visualization</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>MLOps</h3>
-        <p>Docker, AWS, Model Deployment</p>
+      <div class="cyber-card">
+        <div class="card-glow"></div>
+        <div class="card-content">
+          <h3><span class="icon">OPS.</span>MLOps</h3>
+          <p class="tech-stack">> Docker, AWS, Model Deployment</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="projects">
-    <h2>Featured Projects</h2>
+  <section id="projects" class="cyber-section">
+    <div class="section-header">
+      <h2><span class="header-brackets">[</span> Featured Projects <span class="header-brackets">]</span></h2>
+      <div class="cyber-line"></div>
+    </div>
     <div class="grid-container">
-      <div class="card">
-        <h3>🧠 Neural Optimizer</h3>
-        <p>Optimizing deep learning weights for edge devices.</p>
+      <div class="cyber-card project-card">
+        <div class="card-glow"></div>
+        <div class="card-content">
+          <h3><span class="project-id">#01 </span>Neural Optimizer</h3>
+          <p>Optimizing deep learning weights for edge devices.</p>
+          <div class="status-bar"><span class="status green">ONLINE</span></div>
+        </div>
       </div>
-      <div class="card">
-        <h3>🤖 AI Assistant</h3>
-        <p>Custom LLM implementation for enterprise workflows.</p>
+      <div class="cyber-card project-card">
+        <div class="card-glow"></div>
+        <div class="card-content">
+          <h3><span class="project-id">#02 </span>AI Assistant</h3>
+          <p>Custom LLM implementation for enterprise workflows.</p>
+          <div class="status-bar"><span class="status green">ONLINE</span></div>
+        </div>
       </div>
-      <div class="card">
-        <h3>📈 Analytics System</h3>
-        <p>Real-time predictive modeling for financial trends.</p>
+      <div class="cyber-card project-card">
+        <div class="card-glow"></div>
+        <div class="card-content">
+          <h3><span class="project-id">#03 </span>Analytics System</h3>
+          <p>Real-time predictive modeling for financial trends.</p>
+          <div class="status-bar"><span class="status saffron">COMPUTING</span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Let's Connect</h2>
-    <p>Open for collaborations and full-time opportunities.</p>
-    <div style="margin-top: 20px;">
-      <a href="#">GitHub</a> | <a href="#">LinkedIn</a> | <a href="mailto:email@example.com">Email</a>
+  <section id="contact" class="cyber-section">
+    <div class="section-header">
+      <h2><span class="header-brackets">[</span> Let's Connect <span class="header-brackets">]</span></h2>
+      <div class="cyber-line"></div>
+    </div>
+    <div class="glass-panel text-center">
+      <p class="terminal-text">> STATUS: Open for collaborations and full-time opportunities_</p>
+      <div class="social-links">
+        <a href="#" class="cyber-link">GitHub</a> 
+        <span class="separator">||</span> 
+        <a href="#" class="cyber-link">LinkedIn</a> 
+        <span class="separator">||</span> 
+        <a href="mailto:email@example.com" class="cyber-link">Email</a>
+      </div>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 CAIC | Designed for All Devices</p>
+    <div class="footer-content">
+      <p class="sys-msg">SYSTEM.HALT();</p>
+      <p>© 2026 CAIC | <span class="highlight-white">Designed for All Devices</span></p>
+    </div>
   </footer>
 </body>
 </html>
