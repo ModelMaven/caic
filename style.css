@@ -138,3 +138,11 @@ footer a { color: #ff9933; text-decoration: none; margin: 0 10px; }
   }
   .hero { padding: 60px 20px; }
 }
+
+.logo-container {
+  background-image: url('caic_logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+}
