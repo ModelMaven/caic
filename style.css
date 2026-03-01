@@ -602,21 +602,68 @@ footer {
 
   nav {
     margin-top: 15px;
-    gap: 15px;
-    flex-wrap: wrap;
+    gap: 10px;
+    /* Reduced gap to save space */
+    flex-wrap: nowrap;
+    /* Force single line */
     justify-content: center;
+    width: 100%;
+    overflow-x: auto;
+    /* Allow scrolling if screen is extremely small */
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 5px;
+    /* Space for scrollbar if it appears */
+  }
+
+  nav a {
+    font-size: 0.85rem;
+    /* Smaller font to fit */
+    white-space: nowrap;
+    /* Prevent text wrapping within links */
   }
 
   .cyber-section {
-    padding: 60px 20px;
+    padding: 60px 15px;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+    /* Reduced from 2.5rem to fit on one line */
+    white-space: nowrap;
+    /* Prevent wrapping */
   }
 
   .hero {
-    padding: 60px 20px;
+    padding: 60px 15px;
     min-height: 60vh;
   }
 
   .hero-content {
     padding: 20px;
+  }
+
+  .glitch {
+    font-size: 2.5rem;
+    /* Smaller hero text */
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    /* Force single line */
+    gap: 5px;
+  }
+
+  .cyber-link {
+    font-size: 0.9rem;
+    /* Smaller font */
+    padding: 5px;
+    white-space: nowrap;
+  }
+
+  .separator {
+    margin: 0 2px;
   }
 }
