@@ -5,7 +5,6 @@
   --green: #138808;
   --green-glow: rgba(19, 136, 8, 0.6);
   --navy: #000080;
-
   /* Theme Variables (Default: Dark Mode) */
   --bg-dark: #02020a;
   /* Very dark navy/black for space/cyber feel */
@@ -23,11 +22,9 @@
   --glitch-shadow-2: var(--green);
   --glitch-shadow-3: var(--white);
   --text-shadow-glow: 0 0 10px var(--white);
-
   --font-main: 'Poppins', sans-serif;
   --font-code: 'Fira Code', monospace;
 }
-
 @media (prefers-color-scheme: light) {
   :root {
     /* Theme Variables for Light Mode */
@@ -57,53 +54,43 @@
     --text-shadow-glow: none;
     /* Remove harsh white shadow in light mode */
   }
-
   /* Disable neon & glitch effects for clean light look */
   .glitch {
     animation: none;
     text-shadow: none;
     color: var(--navy);
   }
-
   .cyber-line {
     box-shadow: none;
   }
-
   .card-glow {
     display: none;
     /* Hide rotating neon border */
   }
-
   .cyber-card {
     box-shadow: 0 4px 15px rgba(0, 0, 64, 0.05);
   }
-
   .cyber-card:hover {
     border-color: var(--saffron);
     box-shadow: 0 8px 25px rgba(0, 0, 64, 0.1);
   }
-
   .cyber-button {
     box-shadow: none;
   }
-
   .cyber-button:hover {
     box-shadow: 0 4px 15px rgba(230, 122, 0, 0.2);
   }
-
   .status.green,
   .status.saffron {
     box-shadow: none;
   }
 }
-
 /* Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: var(--font-main);
   background: var(--bg-dark);
@@ -112,7 +99,6 @@ body {
   overflow-x: hidden;
   position: relative;
 }
-
 /* Futuristic Grid Background */
 .cyber-grid {
   position: fixed;
@@ -128,13 +114,11 @@ body {
   opacity: 0.8;
   pointer-events: none;
 }
-
 /* Selection */
 ::selection {
   background: var(--saffron);
   color: var(--bg-dark);
 }
-
 /* Responsive Navigation */
 header {
   display: flex;
@@ -150,22 +134,18 @@ header {
   z-index: 1000;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
-
 .logo-container img.cyber-logo {
   height: 50px;
   filter: drop-shadow(0 0 8px var(--saffron-glow));
   transition: filter 0.3s ease;
 }
-
 .logo-container img.cyber-logo:hover {
   filter: drop-shadow(0 0 15px var(--saffron));
 }
-
 nav {
   display: flex;
   gap: 20px;
 }
-
 nav a {
   text-decoration: none;
   color: var(--white);
@@ -176,23 +156,19 @@ nav a {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
 .nav-tag {
   color: var(--navy);
   opacity: 0.5;
   transition: all 0.3s;
 }
-
 nav a:hover {
   color: var(--saffron);
   text-shadow: 0 0 8px var(--saffron-glow);
 }
-
 nav a:hover .nav-tag {
   color: var(--saffron);
   opacity: 1;
 }
-
 /* Hero Section */
 .hero {
   display: flex;
@@ -206,7 +182,6 @@ nav a:hover .nav-tag {
   border-bottom: 1px solid var(--card-border);
   position: relative;
 }
-
 .hero-content {
   background: var(--bg-panel);
   padding: 40px;
@@ -215,7 +190,6 @@ nav a:hover .nav-tag {
   box-shadow: inset 0 0 20px rgba(0, 0, 128, 0.1), 0 0 30px rgba(0, 0, 128, 0.05);
   backdrop-filter: blur(5px);
 }
-
 /* Glitch Effect for H1 */
 .glitch {
   font-size: clamp(3rem, 8vw, 5rem);
@@ -227,9 +201,7 @@ nav a:hover .nav-tag {
   letter-spacing: 5px;
   animation: neon-pulse 3s infinite alternate;
 }
-
 @keyframes neon-pulse {
-
   0%,
   19%,
   21%,
@@ -243,45 +215,37 @@ nav a:hover .nav-tag {
       2px 2px 0 var(--glitch-shadow-2),
       var(--text-shadow-glow);
   }
-
   20%,
   24%,
   55% {
     text-shadow: none;
   }
 }
-
-
 .subtitle {
   font-size: clamp(1.2rem, 3vw, 1.8rem);
   color: var(--white);
   margin-bottom: 5px;
   font-family: var(--font-code);
 }
-
 .role-text {
   font-size: clamp(1rem, 2vw, 1.25rem);
   color: var(--text-muted);
   margin-bottom: 30px;
 }
-
 .typewriter {
   color: var(--green);
   font-weight: 600;
   text-shadow: 0 0 8px var(--green-glow);
 }
-
 .cursor {
   animation: blink 1s step-end infinite;
   color: var(--saffron);
 }
-
 @keyframes blink {
   50% {
     opacity: 0;
   }
 }
-
 /* Cyber Button */
 .cyber-button {
   background: transparent;
@@ -300,7 +264,6 @@ nav a:hover .nav-tag {
   letter-spacing: 2px;
   box-shadow: 0 0 10px var(--saffron-glow), inset 0 0 10px var(--saffron-glow);
 }
-
 .cyber-button::before {
   content: '';
   position: absolute;
@@ -311,42 +274,34 @@ nav a:hover .nav-tag {
   background: linear-gradient(90deg, transparent, rgba(255, 153, 51, 0.3), transparent);
   transition: all 0.5s;
 }
-
 .cyber-button:hover {
   background: rgba(255, 153, 51, 0.1);
   box-shadow: 0 0 20px var(--saffron), inset 0 0 15px var(--saffron);
   transform: translateY(-2px);
 }
-
 .cyber-button:hover::before {
   left: 100%;
 }
-
-
 /* Sections Structure */
 .cyber-section {
   padding: 100px 10%;
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .section-header {
   text-align: center;
   margin-bottom: 50px;
 }
-
 .section-header h2 {
   font-size: 2.5rem;
   color: var(--white);
   font-family: var(--font-code);
   font-weight: 400;
 }
-
 .header-brackets {
   color: var(--navy);
   text-shadow: 0 0 5px rgba(0, 0, 128, 0.8);
 }
-
 .cyber-line {
   height: 2px;
   width: 150px;
@@ -354,7 +309,6 @@ nav a:hover .nav-tag {
   margin: 15px auto 0;
   box-shadow: 0 0 10px var(--green-glow);
 }
-
 /* Glass Panels & Modifiers */
 .glass-panel {
   background: var(--bg-panel);
@@ -369,30 +323,25 @@ nav a:hover .nav-tag {
   font-size: 1.1rem;
   color: var(--white);
 }
-
 .highlight-saffron {
   color: var(--saffron);
   font-weight: 600;
   text-shadow: 0 0 5px var(--saffron-glow);
 }
-
 .highlight-green {
   color: var(--green);
   font-weight: 600;
   text-shadow: 0 0 5px var(--green-glow);
 }
-
 .highlight-white {
   color: var(--white);
   font-weight: 600;
 }
-
 .text-center {
   text-align: center;
   border-left: 1px solid rgba(0, 0, 128, 0.3);
   border-bottom: 3px solid var(--green);
 }
-
 /* Grid Systems for Skills & Projects */
 .grid-container {
   display: grid;
@@ -400,7 +349,6 @@ nav a:hover .nav-tag {
   gap: 30px;
   width: 100%;
 }
-
 /* Cyber Cards */
 .cyber-card {
   position: relative;
@@ -412,7 +360,6 @@ nav a:hover .nav-tag {
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
-
 .card-glow {
   position: absolute;
   top: -50%;
@@ -424,13 +371,11 @@ nav a:hover .nav-tag {
   opacity: 0;
   transition: opacity 0.3s;
 }
-
 @keyframes rotate {
   100% {
     transform: rotate(360deg);
   }
 }
-
 .cyber-card::after {
   content: '';
   position: absolute;
@@ -440,22 +385,18 @@ nav a:hover .nav-tag {
   border-radius: 6px;
   z-index: 1;
 }
-
 .cyber-card:hover {
   transform: translateY(-5px);
   border-color: rgba(0, 0, 128, 0.5);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 0 15px rgba(0, 0, 128, 0.1);
 }
-
 .cyber-card:hover .card-glow {
   opacity: 1;
 }
-
 .card-content {
   position: relative;
   z-index: 2;
 }
-
 .cyber-card h3 {
   color: var(--white);
   margin-bottom: 15px;
@@ -464,7 +405,6 @@ nav a:hover .nav-tag {
   align-items: center;
   gap: 10px;
 }
-
 .cyber-card .icon {
   font-family: var(--font-code);
   font-size: 0.9rem;
@@ -474,7 +414,6 @@ nav a:hover .nav-tag {
   border-radius: 4px;
   border: 1px solid rgba(255, 153, 51, 0.3);
 }
-
 .tech-stack {
   font-family: var(--font-code);
   color: #0bdca5;
@@ -482,83 +421,69 @@ nav a:hover .nav-tag {
   color: var(--green);
   font-size: 0.95rem;
 }
-
 /* Project Cards Specials */
 .project-card h3 {
   color: var(--saffron);
   text-shadow: none;
 }
-
 .project-card p {
   color: var(--text-muted);
   margin-bottom: 20px;
 }
-
 .project-id {
   font-family: var(--font-code);
   font-size: 1rem;
   color: var(--text-muted);
   opacity: 0.7;
 }
-
 .status-bar {
   border-top: 1px dashed rgba(255, 255, 255, 0.1);
   padding-top: 15px;
   text-align: right;
 }
-
 .status {
   font-family: var(--font-code);
   font-size: 0.8rem;
   padding: 3px 8px;
   border-radius: 12px;
 }
-
 .status.green {
   background: rgba(19, 136, 8, 0.1);
   color: var(--green);
   border: 1px solid var(--green);
   box-shadow: 0 0 5px var(--green-glow);
 }
-
 .status.saffron {
   background: rgba(255, 153, 51, 0.1);
   color: var(--saffron);
   border: 1px solid var(--saffron);
   box-shadow: 0 0 5px var(--saffron-glow);
 }
-
-
 /* Social Links Footer */
 .terminal-text {
   font-family: var(--font-code);
   color: var(--white);
   margin-bottom: 25px;
 }
-
 .social-links {
   font-family: var(--font-code);
   font-size: 1.1rem;
 }
-
 .cyber-link {
   color: var(--saffron);
   text-decoration: none;
   transition: all 0.3s;
   padding: 5px 10px;
 }
-
 .cyber-link:hover {
   color: var(--bg-dark);
   background: var(--saffron);
   box-shadow: 0 0 10px var(--saffron);
 }
-
 .separator {
   color: rgba(255, 255, 255, 0.2);
   margin: 0 10px;
 }
-
 /* Main Footer */
 footer {
   background: var(--footer-bg);
@@ -568,38 +493,31 @@ footer {
   border-top: 1px solid var(--card-border);
   font-family: var(--font-code);
 }
-
 .sys-msg {
   color: rgba(19, 136, 8, 0.7);
   margin-bottom: 10px;
   font-size: 0.8rem;
 }
-
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
-
 ::-webkit-scrollbar-track {
   background: var(--bg-dark);
 }
-
 ::-webkit-scrollbar-thumb {
   background: var(--navy);
   border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: var(--saffron);
 }
-
 /* MOBILE BREAKPOINT (Tablets and Phones) */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
     padding: 15px;
   }
-
   nav {
     margin-top: 15px;
     gap: 10px;
@@ -614,39 +532,32 @@ footer {
     padding-bottom: 5px;
     /* Space for scrollbar if it appears */
   }
-
   nav a {
     font-size: 0.85rem;
     /* Smaller font to fit */
     white-space: nowrap;
     /* Prevent text wrapping within links */
   }
-
   .cyber-section {
     padding: 60px 15px;
   }
-
   .section-header h2 {
     font-size: 1.8rem;
     /* Reduced from 2.5rem to fit on one line */
     white-space: nowrap;
     /* Prevent wrapping */
   }
-
   .hero {
     padding: 60px 15px;
     min-height: 60vh;
   }
-
   .hero-content {
     padding: 20px;
   }
-
   .glitch {
     font-size: 2.5rem;
     /* Smaller hero text */
   }
-
   .social-links {
     display: flex;
     justify-content: center;
@@ -655,14 +566,12 @@ footer {
     /* Force single line */
     gap: 5px;
   }
-
   .cyber-link {
     font-size: 0.9rem;
     /* Smaller font */
     padding: 5px;
     white-space: nowrap;
   }
-
   .separator {
     margin: 0 2px;
   }
