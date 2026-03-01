@@ -1,82 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CAIC | AI & ML Engineer Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(to bottom right, rgba(255, 153, 51, 0.8), rgba(255, 255, 255, 0.8));
+        }
+        nav {
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+        }
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .card {
+            margin: 10px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        /* Add more styles for sections, footer, etc */
+    </style>
 </head>
-
 <body>
-  <header>
-    <img src="caic_logo.png" alt="CAIC Logo">
     <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </nav>
-  </header>
+    
+    <section class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I'm a Web Developer</p>
+    </section>
+    
+    <section id="about" class="card">
+        <h2>About Me</h2>
+        <p>Details about me...</p>
+    </section>
 
-  <section class="hero">
-    <h1>CAIC</h1>
-    <p><strong>Comma and Inverted Comma</strong><br>AI & ML Engineer | Building Intelligent Systems</p>
-    <button class="cta" onclick="window.location.href='mailto:sameerrsingh2791@gmail.com'">Get In Touch</button>
-  </section>
+    <section id="skills" class="card">
+        <h2>Skills</h2>
+        <div>
+            <div>HTML</div>
+            <div style="width:70%; background: green;">70%</div>
+            <div>CSS</div>
+            <div style="width:60%; background: green;">60%</div>
+            <div>JavaScript</div>
+            <div style="width:50%; background: green;">50%</div>
+        </div>
+    </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m an AI and Machine Learning Engineer specializing in creating intelligent systems that bridge innovation and efficiency. I work across multiple domains integrating ML models, automation, and scalable deployment solutions.</p>
-  </section>
+    <section id="projects" class="card">
+        <h2>Projects</h2>
+        <p>Details about projects...</p>
+    </section>
 
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <div class="grid-container">
-      <div class="card">
-        <h3>Core ML</h3>
-        <p>Python, TensorFlow, PyTorch</p>
-      </div>
-      <div class="card">
-        <h3>Data Science</h3>
-        <p>Pandas, Scikit-learn, Visualization</p>
-      </div>
-      <div class="card">
-        <h3>MLOps</h3>
-        <p>Docker, AWS, Model Deployment</p>
-      </div>
-    </div>
-  </section>
+    <section id="contact" class="card">
+        <h2>Contact Me</h2>
+        <p>Details about contacting...</p>
+    </section>
 
-  <section id="projects">
-    <h2>Featured Projects</h2>
-    <div class="grid-container">
-      <div class="card">
-        <h3>🧠 Neural Optimizer</h3>
-        <p>Optimizing deep learning weights for edge devices.</p>
-      </div>
-      <div class="card">
-        <h3>🤖 AI Assistant</h3>
-        <p>Custom LLM implementation for enterprise workflows.</p>
-      </div>
-      <div class="card">
-        <h3>📈 Analytics System</h3>
-        <p>Real-time predictive modeling for financial trends.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Let's Connect</h2>
-    <p>Open for collaborations and full-time opportunities.</p>
-    <div style="margin-top: 20px;">
-      <a href="#">GitHub</a> | <a href="#">LinkedIn</a> | <a href="mailto:email@example.com">Email</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 CAIC | Designed for All Devices</p>
-  </footer>
+    <footer>
+        <p>&copy; 2026 Your Name</p>
+    </footer>
 </body>
 </html>
-
